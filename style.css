@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: consolas;
+}
+
+div{
+    width: 250px;
+    height: 200px;
+    margin: 100px auto;
+    position : relative;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+div::before{
+    content: "";
+    background-color: grey;
+    background: rgb(7,26,126);
+    background: linear-gradient(23deg, rgba(7,26,126,1) 11%, rgba(252,70,107,1) 81%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    outline: none;
+    box-shadow: 1.49px 0.8px 5px;
+    border-radius: 50px;
+}
+
+div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    background: rgb(131,58,180);
+    background: linear-gradient(22deg, rgba(131,58,180,1) 33%, rgba(140,222,57,1) 77%);
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    outline: none;
+    box-shadow: 1.49px 0.8px 5px;
+    border-radius: 50px;
+}
+
+div:hover::before{
+    top: -40px;
+    left: -40px;
+    transition: 1.2s;
+    cursor: pointer;
+}
+
+div:hover::after{
+    top: -80px;
+    left: -80px;
+    transition: 1.2s;
+    cursor: pointer;
+}
